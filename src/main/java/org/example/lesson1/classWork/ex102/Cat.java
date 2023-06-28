@@ -33,4 +33,8 @@ public class Cat extends Animal {
             System.out.println("Введен некорректный возраст");
         }
     }
+    @Override
+    public void voice(){
+        System.out.println(" мяу-мяу");
+    }
 }
