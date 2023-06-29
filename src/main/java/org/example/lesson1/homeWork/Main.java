@@ -48,6 +48,5 @@ public class Main {
         System.out.println("==========================");
         System.out.println(category1);
         System.out.println(category2);
-
     }
 }
