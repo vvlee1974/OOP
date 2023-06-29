@@ -1,14 +1,18 @@
 package org.example.lesson1.homeWork;
 
 public class Product {
-    private String name;
-    private Double price;
-    private Integer rating;
+    protected String name;
+    protected Double price;
+    protected Integer rating;
 
     public Product(String name, Double price, Integer rating) {
         this.name = name;
         this.price = price;
         this.rating = rating;
+    }
+
+    public Product(String name) {
+        this.name = name;
     }
 
     public Product() {
@@ -36,5 +40,10 @@ public class Product {
 
     public void setRating(Integer rating) {
         this.rating = rating;
+    }
+
+    @Override
+    public String toString() {
+        return "(" + rating + ". " + name + " / " + price + ")";
     }
 }

@@ -5,18 +5,28 @@ import java.util.ArrayList;
 public class Basket {
     private ArrayList<Product> products;
 
-    public Basket(ArrayList<Product> products) {
-        this.products = products;
-    }
-
     public Basket() {
+        this.products = new ArrayList<>();
     }
 
     public ArrayList<Product> getProducts() {
         return products;
     }
 
-    public void setProducts(ArrayList<Product> products) {
-        this.products = products;
+    /**
+     *
+     * @param product выбранный товар
+     */
+    public void addProduct(Product product) {
+        products.add(product);
+    }
+
+    public void removeProduct(Product product) {
+        products.remove(product);
+    }
+
+    @Override
+    public String toString() {
+        return " " + products ;
     }
 }
