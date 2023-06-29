@@ -12,23 +12,12 @@ public class Category {
         this.products = products;
     }
 
-    public Category(String name) {
-        this.name = name;
-    }
-
-    public Category() {
-    }
-
     /**
      *
      * @return список товаров
      */
     public List<Product> getProducts() {
         return products;
-    }
-
-    public String getName() {
-        return name;
     }
 
     public void addProduct(Product product) {

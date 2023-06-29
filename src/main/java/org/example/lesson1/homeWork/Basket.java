@@ -9,10 +9,6 @@ public class Basket {
         this.products = new ArrayList<>();
     }
 
-    public ArrayList<Product> getProducts() {
-        return products;
-    }
-
     /**
      *
      * @param product выбранный товар
