@@ -1,6 +1,5 @@
 package org.example.lesson2.homework;
 
-
 public abstract class Players {
      String name;
 

@@ -1,26 +1,22 @@
 package org.example.lesson2.homework;
 
-import static org.example.lesson2.homework.Obstacles.getHeight;
-import static org.example.lesson2.homework.Obstacles.getLength;
 
 public class Main {
     public static void main(String[] args) {
-        Players[] players = {new Human("Василий Пупкин", 750, 2),
-                new Cats("Барсик", 500, 4)
+        Players[] players = {new Human("Василий Пупкин", 500, 2),
+                new Cats("Барсик", 1500, 4)
         };
-        Obstacles[] obstacles = {new Treadmill("Беговая дорожка"),
-                new Wall("Стена")
+        Obstacles[] obstacles = {new Treadmill("Беговая дорожка", 450),
+                new Wall("Стена", 3)
         };
 
         for (Obstacles obstacle : obstacles) {
             obstacle.start();
             for (Players player : players) {
-//            player.playerInfo();
-//            System.out.println("----------------------------------");
                 if (obstacle.getName().equals("Стена")) {
-                    player.jump(getHeight());
+                    player.jump(obstacle.getSize());
                 } else {
-                    player.run(getLength());
+                    player.run(obstacle.getSize());
                 }
             }
             obstacle.stop();

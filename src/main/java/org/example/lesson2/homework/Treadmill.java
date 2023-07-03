@@ -1,10 +1,15 @@
 package org.example.lesson2.homework;
 
 public class Treadmill  extends Obstacles{
-    //private static int length = 750;
+    private  int length ;
 
-    public Treadmill(String name) {
-        super(name);
+    public Treadmill(String name, int size) {
+        super(name, size);
+        this.length = size;
+    }
+
+    public int getLength() {
+        return length;
     }
 
     @Override
