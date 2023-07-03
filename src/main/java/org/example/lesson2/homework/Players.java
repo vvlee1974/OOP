@@ -8,8 +8,26 @@ public abstract class Players {
         this.name = name;
     }
 
+    public Players() {
+    }
+
     public void playerInfo() {
         System.out.println("Участник: " + name + " готов!");
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "Players{" +
+                "name='" + name + '\'' +
+                '}';
     }
 
     public abstract void run(int size);

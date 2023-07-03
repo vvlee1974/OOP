@@ -1,32 +1,29 @@
 package org.example.lesson2.homework;
 
+import static org.example.lesson2.homework.Obstacles.getHeight;
+import static org.example.lesson2.homework.Obstacles.getLength;
+
 public class Main {
     public static void main(String[] args) {
-        Obstacles[] obstacles = {new Treadmill("Беговая дорожка", 400),
-                new Wall("Стена", 5), new Wall("Стена2", 10)
+        Players[] players = {new Human("Василий Пупкин", 750, 2),
+                new Cats("Барсик", 500, 4)
+        };
+        Obstacles[] obstacles = {new Treadmill("Беговая дорожка"),
+                new Wall("Стена")
         };
 
-        Players[] players = {new Human("Василий", 500, 2),
-                new Human("Инокентий", 300, 1)
-        };
+        //Wall wall = new Wall("Стена");
 
+        // System.out.println("wall.getHeight() = " + wall.getHeight());
 
         for (Players player : players) {
             player.playerInfo();
-            System.out.println("-------------------------------");
+            System.out.println("----------------------------------");
             for (Obstacles obstacle : obstacles) {
-                obstacle.start();
-                if (obstacle.toString().equals("Беговая дорожка") ) {
-                    player.run(obstacle.size);
-                } else {
-                    player.jump(obstacle.size);
-                }
-                obstacle.stop();
-                System.out.println("-------------------------------");
+
+                player.jump(getHeight());
+                player.run(getLength());
             }
-            System.out.println("=============================================");
-
-
         }
     }
 }

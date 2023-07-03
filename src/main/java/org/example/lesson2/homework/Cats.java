@@ -1,20 +1,27 @@
 package org.example.lesson2.homework;
 
-public class Human extends Players {
-    int runLimit = 500;
-    int jumpLimit = 2;
+public class Cats extends Players{
+    int runLimit;
+    int jumpLimit;
 
-    public Human(String name, int runLimit, int jumpLimit) {
+    public Cats(String name, int runLimit, int jumpLimit) {
         super(name);
         this.runLimit = runLimit;
         this.jumpLimit = jumpLimit;
     }
 
-
-
-    public Human() {
-
+    public Cats(int runLimit, int jumpLimit) {
+        this.runLimit = runLimit;
+        this.jumpLimit = jumpLimit;
     }
+
+    public Cats(String name) {
+        super(name);
+    }
+
+    public Cats() {
+    }
+
 
     public int getRunLimit() {
         return runLimit;
@@ -26,7 +33,7 @@ public class Human extends Players {
 
     @Override
     public String toString() {
-        return "Human{" +
+        return "Cats{" +
                 "runLimit=" + runLimit +
                 ", jumpLimit=" + jumpLimit +
                 ", name='" + name + '\'' +

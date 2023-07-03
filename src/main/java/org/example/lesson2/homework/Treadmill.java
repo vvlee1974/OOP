@@ -1,13 +1,19 @@
 package org.example.lesson2.homework;
 
-public class Treadmill extends Obstacles {
-    int length;
+public class Treadmill  extends Obstacles{
+    //private static int length = 750;
 
-    public Treadmill(String name, int size) {
+    public Treadmill(String name) {
         super(name);
-        this.length = size;
     }
 
-    public Treadmill() {
+    @Override
+    public void start() {
+        super.start();
+    }
+
+    @Override
+    public void stop() {
+        super.stop();
     }
 }

@@ -1,34 +1,33 @@
 package org.example.lesson2.homework;
 
-public class Obstacles implements ObstacleCourse {
-    private String name;
-    int size;
 
-    public Obstacles(String name, int size) {
-        this.name = name;
-        this.size = size;
-    }
+public class Obstacles implements ObstacleCourse{
+    private String name;
+    private static int height = 3;
+    private static int length = 750;
+
 
     public Obstacles(String name) {
         this.name = name;
     }
 
-    public Obstacles() {
+    public static int getHeight() {
+        return height;
     }
 
-    @Override
-    public String toString() {
-        return name;
+    public static int getLength() {
+        return length;
     }
+
 
     @Override
     public void start() {
-        System.out.println("Начало этапа - " + name);
+        System.out.println("Старт этапа.");
     }
 
     @Override
     public void stop() {
-        System.out.println("Конец этапа - " + name);
+        System.out.println("Финиш этапа.");
     }
 
 
