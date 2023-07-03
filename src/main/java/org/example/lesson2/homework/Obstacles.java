@@ -11,6 +11,10 @@ public class Obstacles implements ObstacleCourse{
         this.name = name;
     }
 
+    public String getName() {
+        return name;
+    }
+
     public static int getHeight() {
         return height;
     }
@@ -29,6 +33,7 @@ public class Obstacles implements ObstacleCourse{
     public void stop() {
         System.out.println("Финиш этапа.");
     }
+
 
 
 }

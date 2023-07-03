@@ -12,17 +12,15 @@ public class Main {
                 new Wall("Стена")
         };
 
-        //Wall wall = new Wall("Стена");
-
-        // System.out.println("wall.getHeight() = " + wall.getHeight());
-
         for (Players player : players) {
             player.playerInfo();
             System.out.println("----------------------------------");
             for (Obstacles obstacle : obstacles) {
-
-                player.jump(getHeight());
+                if (obstacle.getName().equals("Стена")) {
+                    player.jump(getHeight());
+                }else {
                 player.run(getLength());
+                }
             }
         }
     }
