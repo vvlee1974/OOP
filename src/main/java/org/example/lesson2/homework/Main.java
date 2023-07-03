@@ -12,16 +12,19 @@ public class Main {
                 new Wall("Стена")
         };
 
-        for (Players player : players) {
-            player.playerInfo();
-            System.out.println("----------------------------------");
-            for (Obstacles obstacle : obstacles) {
+        for (Obstacles obstacle : obstacles) {
+            obstacle.start();
+            for (Players player : players) {
+//            player.playerInfo();
+//            System.out.println("----------------------------------");
                 if (obstacle.getName().equals("Стена")) {
                     player.jump(getHeight());
-                }else {
-                player.run(getLength());
+                } else {
+                    player.run(getLength());
                 }
             }
+            obstacle.stop();
+            System.out.println("----------------------------------");
         }
     }
 }

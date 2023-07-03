@@ -46,6 +46,7 @@ public class Human extends Players {
     public void jump(int size) {
         if (size > this.jumpLimit){
             System.out.println(super.name + " не смог перепрыгнуть");
+
         }else {
             System.out.println(super.name + " перепрыгнул");
         }

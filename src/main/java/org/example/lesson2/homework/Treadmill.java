@@ -9,11 +9,11 @@ public class Treadmill  extends Obstacles{
 
     @Override
     public void start() {
-        super.start();
+        System.out.println("    Старт этапа - " + super.getName());
     }
 
     @Override
     public void stop() {
-        super.stop();
+        System.out.println("    Финиш этапа - " + super.getName());
     }
 }
