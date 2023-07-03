@@ -1,8 +1,8 @@
 package org.example.lesson2.homework;
 
 public class Human extends Players {
-    int runLimit = 500;
-    int jumpLimit = 2;
+    int runLimit;
+    int jumpLimit;
 
     public Human(String name, int runLimit, int jumpLimit) {
         super(name);
