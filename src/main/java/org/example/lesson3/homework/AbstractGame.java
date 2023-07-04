@@ -25,12 +25,13 @@ public abstract class AbstractGame implements Game {
     }
 
     @Override
-    public void start(int wordLength, int attempts) {
+    public String start(int wordLength, int attempts) {
         status = GameStatus.START;
         this.wordLength = wordLength;
         this.tryCount = attempts;
         word = generateWord();
-        System.out.println("word = " + word); // todo: выводить в конце игры
+        //System.out.println("word = " + word); // todo: выводить в конце игры
+        return word;
     }
 
     @Override
