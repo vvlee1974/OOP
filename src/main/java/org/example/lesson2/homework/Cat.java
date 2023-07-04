@@ -1,18 +1,18 @@
 package org.example.lesson2.homework;
 
-public class Human implements Skills {
+public class Cat implements Skills{
     private Obstacle currentStage;
     private String name;
     int runLimit;
     int jumpLimit;
 
-    public Human(String name, int runLimit, int jumpLimit) {
+    public Cat(String name, int runLimit, int jumpLimit) {
         this.name = name;
         this.runLimit = runLimit;
         this.jumpLimit = jumpLimit;
     }
 
-    public Human() {
+    public Cat() {
     }
 
     @Override

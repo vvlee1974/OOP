@@ -1,11 +1,16 @@
 package org.example.lesson2.homework;
 
-public class Wall extends Obstacles {
-    private  int height;
+public class Wall implements Obstacle {
 
-    public Wall(String name, int size) {
-        super(name, size);
-        this.height = size;
+    private String name;
+    private int height;
+
+    public Wall(String name, int height) {
+        this.name = name;
+        this.height = height;
+    }
+
+    public Wall() {
     }
 
     public int getHeight() {
@@ -13,14 +18,13 @@ public class Wall extends Obstacles {
     }
 
     @Override
-    public void start() {
-        System.out.println("    Старт этапа - " + super.getName());
+    public void begin() {
+        System.out.println('"' + name + '"'+ ", " + height + " м" + ":");
+        System.out.println("-------------");
     }
 
     @Override
-    public void stop() {
-        System.out.println("    Финиш этапа - " + super.getName());
+    public void end() {
+        System.out.println();
     }
-
-
 }

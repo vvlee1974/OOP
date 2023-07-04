@@ -1,24 +1,29 @@
 package org.example.lesson2.homework;
 
-public class Treadmill  extends Obstacles{
-    private  int length ;
+public class Treadmill implements Obstacle{
+    private String name;
+    private int length;
 
-    public Treadmill(String name, int size) {
-        super(name, size);
-        this.length = size;
+    public Treadmill(String name, int length) {
+        this.name = name;
+        this.length = length;
+    }
+
+    public Treadmill() {
+    }
+
+    @Override
+    public void begin() {
+        System.out.println('"' + name + '"'+ ", " + length + " м" + ":");
+        System.out.println("--------------------------");
+    }
+
+    @Override
+    public void end() {
+        System.out.println();
     }
 
     public int getLength() {
         return length;
-    }
-
-    @Override
-    public void start() {
-        System.out.println("    Старт этапа - " + super.getName());
-    }
-
-    @Override
-    public void stop() {
-        System.out.println("    Финиш этапа - " + super.getName());
     }
 }
