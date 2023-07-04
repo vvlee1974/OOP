@@ -36,7 +36,7 @@ public abstract class AbstractGame implements Game {
 
     @Override
     public Answer inputValue(String input) {
-        if (--tryCount == 0) {
+        if ((tryCount--) == 0) {
             status = GameStatus.FINISH;
             return null;
         }

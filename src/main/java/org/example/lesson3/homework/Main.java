@@ -21,6 +21,7 @@ public class Main {
         int tryCount = scanner.nextInt();
         int t = tryCount;
         scanner.nextLine();
+        //scanner.close();
 
 
         System.out.println("-------------------------------------");
@@ -43,24 +44,26 @@ public class Main {
         while (!(isFinish || isWin)) {
             Answer answer = game.inputValue(scanner.nextLine());
             if (answer != null) {
-                System.out.println("Результат: " + answer);
                 tryCount--;
-                System.out.println("Количество попыток: " + tryCount);
+                System.out.println("Результат: " + answer);
+                System.out.println("Осталось попыток: " + tryCount);
                 System.out.println("-------------------------------------");
                 count += 1;
             }
-            isFinish = game.getGameStatus() == GameStatus.FINISH;
-            isWin = game.getGameStatus() == GameStatus.WIN;
+            isFinish = (game.getGameStatus() == GameStatus.FINISH) || tryCount == 0;
+            isWin = (game.getGameStatus() == GameStatus.WIN) ;
         }
 
         if (isWin) {
             System.out.println("Вы победили!");
-            System.out.println("Задуманные символы = " + x);
+            System.out.println("Задуманные символы: " + x);
                 System.out.println("-------------------------------------");
             System.out.println("Использовано попыток " + count + " из " + t);
         } else {
             System.out.println("Вы проиграли...");
-            System.out.println("Задуманные символы = " + x);
+            System.out.println("Задуманные символы: " + x);
+            //System.out.println("Хотите добавить дополнительные 3 попытки?!);
+            // todo: Подумать о возможности добавить попытки к текущей игре
         }
     }
 }
