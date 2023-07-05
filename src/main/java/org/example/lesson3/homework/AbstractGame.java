@@ -26,7 +26,6 @@ public abstract class AbstractGame implements Game {
         this.wordLength = wordLength;
         this.tryCount = attempts;
         word = generateWord();
-        //System.out.println("word = " + word); // todo: выводить в конце игры
         return word;
     }
 
