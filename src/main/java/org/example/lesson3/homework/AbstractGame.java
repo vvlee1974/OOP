@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Random;
 
 public abstract class AbstractGame implements Game {
+    protected String name;
     protected int wordLength;
 
     protected int tryCount;
@@ -12,16 +13,11 @@ public abstract class AbstractGame implements Game {
 
     protected GameStatus status = GameStatus.INIT;
 
-
-    public AbstractGame(int wordLength, int tryCount, String word, GameStatus status) {
-        this.wordLength = wordLength;
-        this.tryCount = tryCount;
-        this.word = word;
-        this.status = status;
+    public AbstractGame() {
     }
 
-    public AbstractGame() {
-
+    public String getName() {
+        return name;
     }
 
     @Override

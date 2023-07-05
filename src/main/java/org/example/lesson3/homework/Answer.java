@@ -12,14 +12,6 @@ public class Answer {
     public Answer() {
     }
 
-    public int getBulls() {
-        return bulls;
-    }
-
-    public int getCows() {
-        return cows;
-    }
-
     @Override
     public String toString() {
         return "быки: " + bulls + ", коровы: " + cows;

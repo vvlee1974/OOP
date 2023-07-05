@@ -3,17 +3,18 @@ package org.example.lesson3.homework;
 import java.util.ArrayList;
 import java.util.List;
 
-public class NumberGame extends AbstractGame {
+public class EngGame extends AbstractGame{
 
     @Override
     public String getName() {
-        return "Быки и коровы. Числа.";
+        return "Bulls and cows.";
     }
+
     @Override
     public List<String> generateCharList() {
         List<String> strList = new ArrayList<>();
-        for (int i = 0; i < 10; i++) {
-            strList.add(Integer.toString(i));
+        for (int i = 'a'; i <= 'z'; i++) {
+            strList.add(Character.toString(i));
         }
         return strList;
     }

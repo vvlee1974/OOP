@@ -4,6 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class RuGame extends AbstractGame {
+
+    @Override
+    public String getName() {
+        return "Быки и коровы. На русском.";
+    }
+
     @Override
     public List<String> generateCharList() {
         List<String> strList = new ArrayList<>();
@@ -12,4 +18,6 @@ public class RuGame extends AbstractGame {
         }
         return strList;
     }
+
+
 }
