@@ -20,6 +20,7 @@ public class Main {
         int choiceGame = scanner.nextInt();
 
         AbstractGame game = getChoiceNewGame(choiceGame);
+
         if (game != null) {
             System.out.println("=====================================");
             System.out.println("Игра - " + game.getName());
@@ -40,9 +41,6 @@ public class Main {
         System.out.println("-------------------------------------");
         System.out.println("Поехали!");
         System.out.println("Количество попыток: " + tryCount);
-
-
-
 
         assert game != null;
         gamePlay(scanner, userLogin, game, tryCount, wordLength);
