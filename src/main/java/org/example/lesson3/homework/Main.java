@@ -58,9 +58,9 @@ public class Main {
         int t = tryCount;
 
         assert game != null;
-        String x = game.start(wordLength, tryCount);
+        String word = game.start(wordLength, tryCount);
 
-        char[] chars = x.toCharArray();
+        char[] chars = word.toCharArray();
         //System.out.println("Arrays.toString(chars) = " + Arrays.toString(chars));
         for (int i = 0; i < chars.length; i++) {
             System.out.print("*  ");
@@ -88,13 +88,13 @@ public class Main {
         if (isWin) {
             System.out.println("Игрок: " + userLogin);
             System.out.println("Вы победили!");
-            System.out.println("Задуманное слово: " + x);
+            System.out.println("Задуманное слово: " + word);
             System.out.println("-------------------------------------");
             System.out.println("Использовано попыток " + count + " из " + t);
         } else {
             System.out.println("Игрок: " + userLogin);
             System.out.println("Вы проиграли...");
-            System.out.println("Задуманное слово: " + x);
+            System.out.println("Задуманное слово: " + word);
         }
         System.out.println("=====================================");
     }
