@@ -116,7 +116,6 @@ public class Main {
                     return new EngGame();
                 }
                 default -> System.out.println("???");
-
             }
         }
         return null;
