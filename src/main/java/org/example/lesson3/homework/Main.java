@@ -44,6 +44,7 @@ public class Main {
 
         assert game != null;
         gamePlay(scanner, userLogin, game, tryCount, wordLength);
+
     }
 
     /**

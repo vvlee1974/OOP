@@ -36,10 +36,8 @@ public abstract class AbstractGame implements Game {
             status = GameStatus.FINISH;
             return null;
         }
-
         int bulls = 0;
         int cows = 0;
-
         for (int i = 0; i < input.length(); i++) {
             if (input.charAt(i) == word.charAt(i)){
                 bulls++;
@@ -48,11 +46,9 @@ public abstract class AbstractGame implements Game {
                 cows++;
             }
         }
-
         if (bulls == wordLength){
             status = GameStatus.WIN;
         }
-
         return new Answer(bulls, cows);
     }
 
