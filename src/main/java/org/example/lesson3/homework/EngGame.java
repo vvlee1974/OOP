@@ -4,10 +4,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class EngGame extends AbstractGame{
+    private String name = "Bulls and cows. English";
 
-    @Override
+    public EngGame(String name) {
+        this.name = name;
+    }
+
+    public EngGame() {
+    }
+
     public String getName() {
-        return "Bulls and cows.";
+        return name;
     }
 
     @Override

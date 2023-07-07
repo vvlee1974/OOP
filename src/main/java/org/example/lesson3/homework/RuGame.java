@@ -4,10 +4,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class RuGame extends AbstractGame {
+    private String name = "Быки и коровы. На русском.";
 
-    @Override
+    public RuGame(String name) {
+        this.name = name;
+    }
+
+    public RuGame() {
+    }
+
     public String getName() {
-        return "Быки и коровы. На русском.";
+        return name;
     }
 
     @Override
@@ -18,6 +25,4 @@ public class RuGame extends AbstractGame {
         }
         return strList;
     }
-
-
 }

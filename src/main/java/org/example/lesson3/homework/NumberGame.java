@@ -4,11 +4,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class NumberGame extends AbstractGame {
+    private String name = "Быки и коровы. Числа.";
 
-    @Override
-    public String getName() {
-        return "Быки и коровы. Числа.";
+    public NumberGame(String name) {
+        this.name = name;
     }
+
+    public NumberGame() {
+    }
+
+    public String getName() {
+        return name;
+    }
+
     @Override
     public List<String> generateCharList() {
         List<String> strList = new ArrayList<>();
