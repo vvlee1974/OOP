@@ -11,7 +11,7 @@ public class Main {
         List<Integer> listInt = new ArrayList<>();
         List<Double> listDouble = new ArrayList<>();
         List<Number> listNum = new ArrayList<>();
-        for (int i = 0; i < 101; i++) {
+        for (int i = 0; i < 11; i++) {
             listInt.add(i);
             listDouble.add((double) i);
             listNum.add(i);
