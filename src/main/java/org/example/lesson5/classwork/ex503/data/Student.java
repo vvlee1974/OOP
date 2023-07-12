@@ -9,4 +9,13 @@ public class Student extends User{
         super(name, birthDate);
         this.studentID = studentID;
     }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "studentID=" + studentID +
+                ", name='" + name + '\'' +
+                ", birthDate=" + birthDate +
+                "}" ;
+    }
 }

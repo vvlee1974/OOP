@@ -14,8 +14,9 @@ public class StudentView {
             Student student = new Student("Ivan", LocalDate.now(), i);
             students.add(student);
         }
+//        System.out.println("students = " + students);
         Controller controller = new Controller();
         controller.send(students);
-        controller.show();
+        System.out.println("controller.show() = " + controller.show(students));
     }
 }

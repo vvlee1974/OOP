@@ -11,8 +11,8 @@ public class Controller {
         userService.create(students);
     }
 
-    public List<Student> show(){
+    public List<Student> show(List<Student> students){
         UserService userService = new UserService();
-        return userService.read();
+        return userService.read( students);
     }
 }
