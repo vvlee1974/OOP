@@ -16,6 +16,6 @@ public class Student extends User{
                 "studentID=" + studentID +
                 ", name='" + name + '\'' +
                 ", birthDate=" + birthDate +
-                "}" ;
+                "}\n" ;
     }
 }
