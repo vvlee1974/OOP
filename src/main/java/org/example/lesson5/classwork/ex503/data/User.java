@@ -1,7 +1,6 @@
 package org.example.lesson5.classwork.ex503.data;
 
 import java.time.LocalDate;
-import java.util.Date;
 
 public abstract class User {
     String name;
