@@ -43,7 +43,6 @@ public class Calc<N extends Number> {
     }
 
     public String toBinaryDoubleFloat(double d, int c) {
-
         long wholePart = (long) d;
         return wholeToBinary(wholePart) + '.' + fractionalToBinary(d - wholePart, c);
     }
