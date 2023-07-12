@@ -11,7 +11,7 @@ public class StudentView {
     public static void main(String[] args) {
         List<Student> students = new ArrayList<>();
         for (int i = 0; i < 10; i++) {
-            Student student = new Student("Ivan", LocalDate.now(), i);
+            Student student = new Student("Ivan Petrov", LocalDate.now(), i);
             students.add(student);
         }
 //        System.out.println("students = " + students);

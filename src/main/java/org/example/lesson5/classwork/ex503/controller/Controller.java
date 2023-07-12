@@ -13,6 +13,6 @@ public class Controller {
 
     public List<Student> show(List<Student> students){
         UserService userService = new UserService();
-        return userService.read( students);
+        return userService.read(students);
     }
 }
