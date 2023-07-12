@@ -38,11 +38,8 @@ public class Calc<N extends Number> {
         return a.doubleValue() / b.doubleValue();
     }
 
-    public String toBinaryInt(N a) {
-        this.a = a;
+    public String toBinaryInt() {
         return Integer.toBinaryString((int) a);
-
-
     }
 
     public String toBinaryDoubleFloat(double d, int c) {
@@ -57,7 +54,7 @@ public class Calc<N extends Number> {
 
     private String fractionalToBinary(double num, int precision) {
         StringBuilder binary = new StringBuilder();
-        while (num > 0 && binary.length() < precision) {
+        while (num >= 0 && binary.length() < precision) {
             double r = num * 2;
             if (r >= 1) {
                 binary.append(1);

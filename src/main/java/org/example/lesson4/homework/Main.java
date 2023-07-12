@@ -12,17 +12,17 @@ public class Main {
         Calc<Float> calcBinary2 = new Calc<>();
         Calc<Integer> calcBinary3 = new Calc<>(5);
 
-        System.out.println("calcSum1 = " + calcSum1.addition());
-        System.out.println("calcSum2 = " + calcSum2.addition());
-        System.out.println("calcSum3 = " + calcSum3.addition());
+        System.out.println("calcSumInt = " + calcSum1.addition());
+        System.out.println("calcSumDouble = " + calcSum2.addition());
+        System.out.println("calcSumFloat = " + calcSum3.addition());
         System.out.println();
         System.out.println("calcProduct = " + calcProduct.multiplication());
         System.out.println();
-        System.out.println("calcBinary.toBinaryDouble(2.4) = " + calcBinary1.toBinaryDoubleFloat(2.4, 4));
+        System.out.println("calcBinary.toBinaryDouble(2.0) = " + calcBinary1.toBinaryDoubleFloat(2.0, 4));
         System.out.println();
         System.out.println("calcBinary.toBinaryFloat(3.4f) = " + calcBinary2.toBinaryDoubleFloat(3.4f, 4));
         System.out.println();
-        System.out.println("calcBinary3.toBinaryInt(15) = " + calcBinary3.toBinaryInt(5));
+        System.out.println("calcBinary3.toBinaryInt(5) = " + calcBinary3.toBinaryInt());
 
     }
 }
