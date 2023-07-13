@@ -17,6 +17,6 @@ public class StudentView {
 //        System.out.println("students = " + students);
         Controller controller = new Controller();
         controller.send(students);
-        System.out.println("controller.show() = \n" + controller.show(students));
+        System.out.println("controller.show() = \n" + controller.show());
     }
 }

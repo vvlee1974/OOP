@@ -7,5 +7,5 @@ import java.util.List;
 public interface DataService {
     void create(List<Student> students);
 
-    List<Student> read(List<Student> students);
+    List<Student> read();
 }
