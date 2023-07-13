@@ -1,21 +1,25 @@
 package org.example.lesson5.homework.data;
+
 import java.time.LocalDate;
 
 public class Staff {
-    LocalDate birthDate;
-    String name;
-    int staffID;
-    String department;
-    String post;
-    double salary;
+    private int staffID;
+    private String name;
+    private LocalDate birthDate;
+    private String department;
+    private String post;
+    private double salary;
 
-    public Staff(String name, LocalDate birthDate, int staffID, String department, String post, double salary) {
-        this.birthDate = birthDate;
-        this.name = name;
+    public Staff(int staffID, String name, LocalDate birthDate, String department, String post, double salary) {
         this.staffID = staffID;
+        this.name = name;
+        this.birthDate = birthDate;
         this.department = department;
         this.post = post;
         this.salary = salary;
+    }
+
+    public Staff() {
     }
 
     @Override

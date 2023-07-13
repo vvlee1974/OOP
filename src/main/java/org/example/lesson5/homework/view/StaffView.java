@@ -2,15 +2,14 @@ package org.example.lesson5.homework.view;
 
 import org.example.lesson5.homework.controller.Controller;
 import org.example.lesson5.homework.data.Staff;
+import org.example.lesson5.homework.model.UserData;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class StaffView {
     public static void main(String[] args) {
-        List<Staff> staffList = new ArrayList<>();
+        UserData userData = new UserData();
         Controller controller = new Controller();
         System.out.println("ОТДЕЛ КАДРОВ");
         System.out.println("============");
@@ -34,14 +33,11 @@ public class StaffView {
                     String post = scanner.nextLine();
                     System.out.println("Введите размер оклада: ");
                     double salary = scanner.nextDouble();
-                    Staff staff = new Staff(staffName, LocalDate.now(),staffID, department, post, salary);
+                    Staff staff = new Staff(staffID, staffName, LocalDate.now(), department, post, salary);
                     controller.send(staff);
-                    System.out.println("userService.read() = " + controller.show());
+                    System.out.println("Введённые данные = " + controller.show());
                 }
-                case 2 -> {
-                    System.out.println("userService.read() = " + controller.show());
-
-                }
+                case 2 -> System.out.println("Полный список = " + userData.getStaffBaseList());
             }
         } else {
             System.out.println("Некорректный ввод. Повторите выбор.");

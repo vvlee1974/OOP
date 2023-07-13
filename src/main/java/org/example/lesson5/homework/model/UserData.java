@@ -8,6 +8,10 @@ import java.util.List;
 public class UserData implements DataService {
     List<Staff> staffBaseList = new ArrayList<>();
 
+    public List<Staff> getStaffBaseList() {
+        return staffBaseList;
+    }
+
     @Override
     public void create(Staff staff) {
         staffBaseList.add(staff);

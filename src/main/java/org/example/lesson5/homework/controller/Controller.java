@@ -9,7 +9,7 @@ public class Controller {
     UserData userData = new UserData();
 
     public void send(Staff staff) {
-        userData.create(staff);
+       userData.create(staff);
     }
 
     public List<Staff> show() {
