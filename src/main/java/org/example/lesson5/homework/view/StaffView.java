@@ -25,8 +25,8 @@ public class StaffView {
                     System.out.println("Введите табельный номер: ");
                     int staffID = scanner.nextInt();
                     System.out.println("Введите ФИО: ");
-                    String staffName = scanner.nextLine();
                     scanner.nextLine();
+                    String staffName = scanner.nextLine();
                     System.out.println("Введите отдел: ");
                     String department = scanner.nextLine();
                     System.out.println("Введите должность: ");
