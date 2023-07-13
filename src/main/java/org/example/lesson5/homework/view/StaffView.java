@@ -10,7 +10,7 @@ import java.util.Scanner;
 public class StaffView {
     public static void main(String[] args) {
         UserData userData = new UserData();
-        Controller controller = new Controller();
+        Controller controller = new Controller(userData);
         System.out.println("ОТДЕЛ КАДРОВ");
         System.out.println("============");
         System.out.println("1 - Добавить нового сотрудника.");
@@ -37,7 +37,7 @@ public class StaffView {
                     controller.send(staff);
                     System.out.println("Введённые данные = " + controller.show());
                 }
-                case 2 -> System.out.println("Полный список = " + userData.getStaffBaseList());
+                case 2 -> System.out.println("Полный список = " +  userData.getStaffBaseList());
             }
         } else {
             System.out.println("Некорректный ввод. Повторите выбор.");

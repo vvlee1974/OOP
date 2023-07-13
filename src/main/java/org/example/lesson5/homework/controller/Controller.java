@@ -8,6 +8,13 @@ import java.util.List;
 public class Controller {
     UserData userData = new UserData();
 
+    public Controller(UserData userData) {
+        this.userData = userData;
+    }
+
+    public Controller() {
+    }
+
     public void send(Staff staff) {
        userData.create(staff);
     }
