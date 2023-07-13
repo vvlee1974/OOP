@@ -22,15 +22,16 @@ public class Staff {
     public Staff() {
     }
 
+
     @Override
     public String toString() {
-        return "Сотрудник (" +
-                "Табельный номер: " + staffID +
-                ", ФИО: " + name +
-                ", Отдел: " + department +
-                ", Должность: " + post +
-                ", Оклад: " + salary +
-                ", Дата принятия: " + birthDate +
-                ')';
+        return "Сотрудник {" +
+                "Табельный номер = " + staffID +
+                ", ФИО = " + name +
+                ", Отдел = " + department +
+                ", Должность = " + post +
+                ", Оклад = " + salary +
+                ", Дата принятия = " + birthDate +
+                "}";
     }
 }
