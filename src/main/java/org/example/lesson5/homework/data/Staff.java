@@ -26,7 +26,7 @@ public class Staff {
     @Override
     public String toString() {
         return "Сотрудник {" +
-                "№ " + staffID +
+                "# " + staffID +
                 ", ФИО = " + name +
                 ", Отдел = " + department +
                 ", Должность = " + post +
