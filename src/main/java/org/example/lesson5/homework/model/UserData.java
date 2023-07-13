@@ -22,8 +22,4 @@ public class UserData implements DataService {
         return staffBaseList;
     }
 
-    @Override
-    public String toString() {
-        return "Полный список: " + staffBaseList;
-    }
 }

@@ -25,13 +25,13 @@ public class Staff {
 
     @Override
     public String toString() {
-        return "Сотрудник {" +
+        return "Сотрудник ({)" +
                 "# " + staffID +
                 ", ФИО = " + name +
                 ", Отдел = " + department +
                 ", Должность = " + post +
                 ", Оклад = " + salary +
                 ", Дата принятия = " + birthDate +
-                "}";
+                ")";
     }
 }
