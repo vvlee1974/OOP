@@ -2,23 +2,20 @@ package org.example.lesson5.homework.view;
 
 import org.example.lesson5.homework.controller.Controller;
 import org.example.lesson5.homework.data.Staff;
-import org.example.lesson5.homework.model.UserData;
 
-import java.time.LocalDate;
 import java.util.Scanner;
 
 public class StaffView {
     public static void main(String[] args) {
-        UserData userData = new UserData();
-        Controller controller = new Controller(userData);
-        System.out.println("ОТДЕЛ КАДРОВ");
-        System.out.println("============");
+        Controller controller = new Controller();
+        System.out.println("===============================");
+        System.out.println("\t\t ОТДЕЛ КАДРОВ");
+        System.out.println("===============================");
         System.out.println("1 - Добавить нового сотрудника.");
         System.out.println("2 - Посмотреть всех сотрудников.");
         System.out.println("_______________________________");
         Scanner scanner = new Scanner(System.in);
         int choice = scanner.nextInt();
-
         if (choice <= 2 && choice > 0) {
             switch (choice) {
                 case 1 -> {
@@ -33,14 +30,29 @@ public class StaffView {
                     String post = scanner.nextLine();
                     System.out.println("Введите размер оклада: ");
                     double salary = scanner.nextDouble();
-                    Staff staff = new Staff(staffID, staffName, LocalDate.now(), department, post, salary);
+                    Staff staff = new Staff(staffName, staffID, department, post, salary);
                     controller.send(staff);
-                    System.out.println("Введённые данные = " + controller.show());
+                    System.out.println("Введённые данные: " + controller.show());
+                    System.out.println("_______________________________");
+                    System.out.println("1 - Добавить запись");
+                    System.out.println("2 - Начать заново");
+                    System.out.println("_______________________________");
+                    int choice2 = scanner.nextInt();
+                    if (choice2 <= 2 && choice2 > 0) {
+                        switch (choice2) {
+                            case 1 -> {
+                                controller.recBase();
+                                System.out.println("_______________________________");
+                                System.out.println("Запись добавлена!");
+                                System.out.println("_______________________________");
+                            }
+                            case 2 -> System.exit(0);
+                        }
+                    } else System.out.println("Некорректный ввод. Повторите выбор.");
                 }
-                case 2 -> System.out.println("Полный список = " +  userData.getStaffBaseList());
+                case 2 -> controller.readerBase();
             }
-        } else {
-            System.out.println("Некорректный ввод. Повторите выбор.");
-        }
+        } else System.out.println("Некорректный ввод. Повторите выбор.");
+        scanner.close();
     }
 }

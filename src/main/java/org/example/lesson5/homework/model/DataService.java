@@ -8,4 +8,8 @@ public interface DataService {
     void create(Staff staff);
 
     List<Staff> read();
+
+    void recBaseFile();
+
+    void readerBaseFile();
 }

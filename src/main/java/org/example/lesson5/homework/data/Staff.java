@@ -1,37 +1,27 @@
 package org.example.lesson5.homework.data;
 
-import java.time.LocalDate;
-
 public class Staff {
-    private int staffID;
-    private String name;
-    private LocalDate birthDate;
-    private String department;
-    private String post;
-    private double salary;
+    String name;
+    int staffID;
+    String department;
+    String post;
+    double salary;
 
-    public Staff(int staffID, String name, LocalDate birthDate, String department, String post, double salary) {
-        this.staffID = staffID;
+    public Staff(String name, int staffID, String department, String post, double salary) {
         this.name = name;
-        this.birthDate = birthDate;
+        this.staffID = staffID;
         this.department = department;
         this.post = post;
         this.salary = salary;
     }
 
-    public Staff() {
-    }
-
-
     @Override
     public String toString() {
-        return "Сотрудник ({)" +
+        return post + " (" +
                 "# " + staffID +
-                ", ФИО = " + name +
-                ", Отдел = " + department +
-                ", Должность = " + post +
-                ", Оклад = " + salary +
-                ", Дата принятия = " + birthDate +
-                ")";
+                ", ФИО: " + this.name +
+                ", Отдел: " + department +
+                ", Оклад: " + salary +
+                ')';
     }
 }

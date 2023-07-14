@@ -6,20 +6,21 @@ import org.example.lesson5.homework.model.UserData;
 import java.util.List;
 
 public class Controller {
-    UserData userData = new UserData();
-
-    public Controller(UserData userData) {
-        this.userData = userData;
-    }
-
-    public Controller() {
-    }
+    UserData userService = new UserData();
 
     public void send(Staff staff) {
-       userData.create(staff);
+        userService.create(staff);
     }
 
     public List<Staff> show() {
-        return userData.read();
+        return userService.read();
+    }
+
+    public void recBase() {
+        userService.recBaseFile();
+    }
+
+    public void readerBase(){
+        userService.readerBaseFile();
     }
 }
