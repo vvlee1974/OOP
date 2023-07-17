@@ -26,7 +26,7 @@ public class Main {
                     scanner.nextLine();
                     String staffName = scanner.nextLine();
                     System.out.println("Введите отдел: ");
-                    Department department = new Department(scanner.nextLine());
+                    Department department =new Department(scanner.nextLine()) ;
                     System.out.println("Введите должность: ");
                     String post = scanner.nextLine();
                     System.out.println("Введите размер оклада: ");

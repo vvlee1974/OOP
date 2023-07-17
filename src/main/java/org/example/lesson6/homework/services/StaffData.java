@@ -23,7 +23,7 @@ public class StaffData implements CreateService, ReaderService, RecordService {
     }
 
     @Override
-    public void readerBaseFile() {
+    public void recBaseFile() {
         try (FileWriter writer = new FileWriter("BaseStaff.txt", true)) {
             // запись всей строки
             String text = staffBaseList.toString();
@@ -39,7 +39,7 @@ public class StaffData implements CreateService, ReaderService, RecordService {
     }
 
     @Override
-    public void recBaseFile() {
+    public void readerBaseFile() {
         try (FileReader reader = new FileReader("BaseStaff.txt")) {
             char[] buf = new char[256];
             int c;
