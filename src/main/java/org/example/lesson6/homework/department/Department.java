@@ -1,9 +1,7 @@
 package org.example.lesson6.homework.department;
 
-import org.example.lesson6.homework.department.AllDepartments;
-
 public class Department implements AllDepartments {
-    String nameDepartment;
+    private String nameDepartment;
 
     public Department(String nameDepartment) {
         this.nameDepartment = nameDepartment;

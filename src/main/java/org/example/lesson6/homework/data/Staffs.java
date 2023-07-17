@@ -1,17 +1,17 @@
 package org.example.lesson6.homework.data;
 
 /* (единственная ответственность -> Single Responsibility Principle)
-* класс хранит только информацию о сотруднике организации
-*/
+ * класс хранит только информацию о сотруднике организации
+ */
 
 import org.example.lesson6.homework.department.Department;
 
-public class Staffs  {
-     String name;
-     int staffID;
-     Department department;
-     String post;
-     double salary;
+public class Staffs {
+    private String name;
+    private int staffID;
+    private Department department;
+    private String post;
+    private double salary;
 
 
     public Staffs() {

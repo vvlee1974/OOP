@@ -10,7 +10,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class StaffData implements CreateService, ReaderService, RecordService {
-    List<Staffs> staffBaseList = new ArrayList<>();
+    private List<Staffs> staffBaseList = new ArrayList<>();
 
     @Override
     public void create(Staffs staff) {

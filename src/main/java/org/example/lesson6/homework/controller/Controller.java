@@ -6,21 +6,21 @@ import org.example.lesson6.homework.services.StaffData;
 import java.util.List;
 
 public class Controller {
-    StaffData staffData = new StaffData();
+    private StaffData staffData = new StaffData();
 
-    public void send(Staffs staff){
+    public void send(Staffs staff) {
         staffData.create(staff);
     }
 
-    public List<Staffs> show(){
+    public List<Staffs> show() {
         return staffData.read();
     }
 
-    public void recBase(){
+    public void recBase() {
         staffData.recBaseFile();
     }
 
-    public void readerBase(){
+    public void readerBase() {
         staffData.readerBaseFile();
     }
 }
