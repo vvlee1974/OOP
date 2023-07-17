@@ -2,11 +2,20 @@
 
 1) Повторить основные понятия
 2) Создать систему управления библиотекой(SOLID)
-a)	(class) Book - должен отвечать только за хранение информации о книге. (единственная ответственность -> Single Responsibility Principle)
-b)	(interface) Genre - должен хранить информацию о жанрах книг. (открыт для расширения, но закрыт для изменения -> Open-Closed Principle)
-c)	ElectronBook (extends Book) - должна иметь формат чтения и размер. (Принцип подстановки Барбары Лисков - >Liskov Substitution Principle)
-d)	(interface) Searchable - должен производить поиск по авторам книг. (Принцип разделения интерфейса -> Interface Segregation Principle)
-e)	(interface) Formatter - должен выводить информацию в различных форматах( без формата,json,html)- заглушки (Принцип инверсии зависимостей -> Dependency Inversion Principle)
+    2.1)	(class) Book - должен отвечать только за хранение информации о книге.
+    (единственная ответственность -> Single Responsibility Principle)
+
+    2.2)	(interface) Genre - должен хранить информацию о жанрах книг.
+    (открыт для расширения, но закрыт для изменения -> Open-Closed Principle)
+
+    2.3)	ElectronBook (extends Book) - должна иметь формат чтения и размер.
+    (Принцип подстановки Барбары Лисков - >Liskov Substitution Principle)
+
+    2.4)	(interface) Searchable - должен производить поиск по авторам книг.
+    (Принцип разделения интерфейса -> Interface Segregation Principle)
+
+    2.5)	(interface) Formatter - должен выводить информацию в различных форматах
+    (без формата,json,html)- заглушки (Принцип инверсии зависимостей -> Dependency Inversion Principle)
 
 3*) Создать систему управления складом(SOLID)
 a)	Product должен хранит информацию о товаре, такую как название, количество, цена и тд. (decreaseQuantity(int amount) , increaseQuantity(int amount))
