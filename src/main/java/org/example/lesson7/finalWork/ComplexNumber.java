@@ -27,4 +27,11 @@ public class ComplexNumber {
     public void setImaginaryPart(Double imaginaryPart) {
         this.imaginaryPart = imaginaryPart;
     }
+
+    @Override
+    public String toString() {
+        return  realPart  +
+                " + " +
+                "(" + imaginaryPart + " i)";
+    }
 }
