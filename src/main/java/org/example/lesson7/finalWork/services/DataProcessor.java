@@ -2,29 +2,40 @@ package org.example.lesson7.finalWork.services;
 
 import org.example.lesson7.finalWork.ComplexNumber;
 
-public class DataProcessor implements Addition, Subtraction, Multiplication, Division{
+public class DataProcessor implements Addition, Subtraction, Multiplication, Division {
 
     @Override
-    public ComplexNumber addition(ComplexNumber complexA, ComplexNumber complexB) {
-        Double real = complexA.getRealPart() + complexB.getRealPart();
-        Double image = complexA.getImaginaryPart() + complexB.getImaginaryPart();
+    public ComplexNumber addition(ComplexNumber a, ComplexNumber b) {
+        Double real = a.getRealPart() + b.getRealPart();
+        Double image = a.getImaginaryPart() + b.getImaginaryPart();
         return new ComplexNumber(real, image);
     }
 
     @Override
-    public ComplexNumber division(ComplexNumber complexA, ComplexNumber complexB) {
-        Double real = complexA.getRealPart() - complexB.getRealPart();
-        Double image = complexA.getImaginaryPart() - complexB.getImaginaryPart();
+    public ComplexNumber subtraction(ComplexNumber a, ComplexNumber b) {
+        Double real = a.getRealPart() - b.getRealPart();
+        Double image = a.getImaginaryPart() - b.getImaginaryPart();
         return new ComplexNumber(real, image);
     }
 
     @Override
-    public void multiplication(ComplexNumber complexA, ComplexNumber complexB) {
-
+    public ComplexNumber multiplication(ComplexNumber a, ComplexNumber b) {
+        Double real = (a.getRealPart() * b.getRealPart() - a.getImaginaryPart() * b.getImaginaryPart());
+        Double image = (a.getRealPart() * b.getImaginaryPart() + a.getImaginaryPart() * b.getRealPart());
+        return new ComplexNumber(real, image);
     }
 
     @Override
-    public void subtraction(ComplexNumber complexA, ComplexNumber complexB) {
-
+    public ComplexNumber division(ComplexNumber a, ComplexNumber b) {
+        if ((Math.pow(b.getRealPart(), 2) + Math.pow(b.getImaginaryPart(), 2)) != 0) {
+            Double real = (a.getRealPart() * b.getRealPart() + a.getImaginaryPart() * b.getImaginaryPart()) /
+                    (Math.pow(b.getRealPart(), 2) + Math.pow(b.getImaginaryPart(), 2));
+            Double image = (a.getImaginaryPart() * b.getRealPart() - a.getRealPart() * b.getImaginaryPart()) /
+                    (Math.pow(b.getRealPart(), 2) + Math.pow(b.getImaginaryPart(), 2));
+            return new ComplexNumber(real, image);
+        }else{
+            System.out.println("Делить на ноль нельзя!!!");
+        }
+        return a;
     }
 }

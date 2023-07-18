@@ -16,22 +16,16 @@ public class ComplexNumber {
         return realPart;
     }
 
-    public void setRealPart(Double realPart) {
-        this.realPart = realPart;
-    }
-
     public Double getImaginaryPart() {
         return imaginaryPart;
     }
 
-    public void setImaginaryPart(Double imaginaryPart) {
-        this.imaginaryPart = imaginaryPart;
-    }
-
     @Override
     public String toString() {
-        return  realPart  +
-                " + " +
-                "(" + imaginaryPart + " i)";
+        if (imaginaryPart > 0) {
+            return realPart + " + " + imaginaryPart + "i";
+        } else if (imaginaryPart < 0) {
+            return realPart + " - " + Math.abs(imaginaryPart)  + "i";
+        } else return String.valueOf(realPart);
     }
 }
