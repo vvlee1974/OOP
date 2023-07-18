@@ -1,4 +1,4 @@
-package org.example.lesson7.finalWork;
+package org.example.lesson7.finalWork.controller;
 
 import org.example.lesson7.finalWork.complexNum.ComplexNumber;
 import org.example.lesson7.finalWork.services.DataProcessor;

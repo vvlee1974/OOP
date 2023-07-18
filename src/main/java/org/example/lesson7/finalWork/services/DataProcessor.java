@@ -35,6 +35,7 @@ public class DataProcessor implements Addition, Subtraction, Multiplication, Div
             return new ComplexNumber(real, image);
         }else{
             System.out.println("Делить на ноль нельзя!!!");
+            System.exit(0);
         }
         return a;
     }
