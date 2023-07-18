@@ -10,13 +10,15 @@ public class Controller {
         return dataProcessor.addition(a, b);
     }
 
-    public ComplexNumber sub(ComplexNumber a, ComplexNumber b){
+    public ComplexNumber sub(ComplexNumber a, ComplexNumber b) {
         return dataProcessor.subtraction(a, b);
     }
-    public ComplexNumber mul(ComplexNumber a, ComplexNumber b){
+
+    public ComplexNumber mul(ComplexNumber a, ComplexNumber b) {
         return dataProcessor.multiplication(a, b);
     }
-public ComplexNumber div(ComplexNumber a, ComplexNumber b){
+
+    public ComplexNumber div(ComplexNumber a, ComplexNumber b) {
         return dataProcessor.division(a, b);
     }
 

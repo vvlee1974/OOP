@@ -34,7 +34,7 @@ public class DataProcessor implements Addition, Subtraction, Multiplication, Div
                     (Math.pow(b.getRealPart(), 2) + Math.pow(b.getImaginaryPart(), 2));
             return new ComplexNumber(real, image);
         }else{
-            System.out.println("Делить на ноль нельзя!!!");
+            System.out.println("Делить на ноль нельзя! \nПроверьте данные делителя!");
             System.exit(0);
         }
         return a;
