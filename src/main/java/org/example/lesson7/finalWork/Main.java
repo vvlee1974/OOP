@@ -1,5 +1,7 @@
 package org.example.lesson7.finalWork;
 
+import org.example.lesson7.finalWork.complexNum.ComplexNumber;
+
 public class Main {
     public static void main(String[] args) {
         ComplexNumber a = new ComplexNumber(7.0, -4.0);

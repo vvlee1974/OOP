@@ -1,4 +1,4 @@
-package org.example.lesson7.finalWork;
+package org.example.lesson7.finalWork.complexNum;
 
 public class ComplexNumber {
     private Double realPart;

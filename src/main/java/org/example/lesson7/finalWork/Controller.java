@@ -1,5 +1,6 @@
 package org.example.lesson7.finalWork;
 
+import org.example.lesson7.finalWork.complexNum.ComplexNumber;
 import org.example.lesson7.finalWork.services.DataProcessor;
 
 public class Controller {
