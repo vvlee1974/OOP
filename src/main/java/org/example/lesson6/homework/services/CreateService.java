@@ -5,6 +5,8 @@ import org.example.lesson6.homework.data.Staffs;
 
 import java.util.List;
 
+
+
 public interface CreateService {
     void create(Staffs staff);
 

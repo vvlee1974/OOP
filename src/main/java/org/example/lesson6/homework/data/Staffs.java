@@ -1,8 +1,8 @@
 package org.example.lesson6.homework.data;
 
-/* (единственная ответственность -> Single Responsibility Principle)
- * класс хранит только информацию о сотруднике организации
- */
+// todo (единственная ответственность -> Single Responsibility Principle)
+//  класс хранит только информацию о сотруднике организации
+
 
 import org.example.lesson6.homework.department.Department;
 
