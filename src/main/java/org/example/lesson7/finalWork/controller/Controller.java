@@ -21,5 +21,4 @@ public class Controller {
     public ComplexNumber div(ComplexNumber a, ComplexNumber b) {
         return dataProcessor.division(a, b);
     }
-
 }
