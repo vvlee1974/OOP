@@ -2,8 +2,7 @@ package org.example.lesson7.finalWork.services;
 
 import org.example.lesson7.finalWork.complexNum.ComplexNumber;
 
-public class DataProcessor implements Addition, Subtraction, Multiplication, Division {
-
+public class DataProcessor implements Calculator{
     @Override
     public ComplexNumber addition(ComplexNumber a, ComplexNumber b) {
         Double real = a.getRealPart() + b.getRealPart();

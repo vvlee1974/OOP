@@ -6,13 +6,10 @@ import org.example.lesson7.finalWork.controller.Controller;
 import java.util.Scanner;
 
 public class ViewCalc {
-    private Controller controller;
+    private final Controller controller;
 
     public ViewCalc(Controller controller) {
         this.controller = controller;
-    }
-
-    public ViewCalc() {
     }
 
     public void run() {
@@ -26,49 +23,40 @@ public class ViewCalc {
         System.out.println("----------------------------");
         int choice = promptInt("Выберете действие: ");
         System.out.println("----------------------------");
-
-
-        System.out.println(" z1 = a + bi");
-        Double realA = (double) promptInt("Введите  действительную часть 'a' первого аргумента 'z1': ");
-        Double imageA = (double) promptInt("Введите  мнимую часть 'b' первого аргумента 'z1': ");
-        ComplexNumber a = new ComplexNumber(realA, imageA);
-        System.out.println();
-        System.out.println(" z2 = a + bi");
-        Double realB = (double) promptInt("Введите  действительную часть 'a' второго аргумента 'z2': ");
-        Double imageB = (double) promptInt("Введите  мнимую часть 'b' второго аргумента 'z2': ");
-        ComplexNumber b = new ComplexNumber(realB, imageB);
-        System.out.println("----------------------------");
-
         if (choice > 0 && choice <= 4) {
+            System.out.println(" z1 = a + bi");
+            Double realA = (double) promptInt("Введите действительную часть 'a' первого аргумента 'z1': ");
+            Double imageA = (double) promptInt("Введите мнимую часть 'b' первого аргумента 'z1': ");
+            ComplexNumber a = new ComplexNumber(realA, imageA);
+            System.out.println();
+            System.out.println(" z2 = a + bi");
+            Double realB = (double) promptInt("Введите действительную часть 'a' второго аргумента 'z2': ");
+            Double imageB = (double) promptInt("Введите мнимую часть 'b' второго аргумента 'z2': ");
+            ComplexNumber b = new ComplexNumber(realB, imageB);
+            System.out.println("----------------------------");
             switch (choice) {
                 case 1 -> {
                     System.out.println("Сложение комплексных чисел");
-                    System.out.println("(a + bi) = " + controller.sum(a, b));
+                    System.out.println("(" + a + ")" + " + " + "(" + b + ")" + " = " + controller.sum(a, b));
                     System.out.println("----------------------------");
                 }
                 case 2 -> {
                     System.out.println("Вычитание комплексных чисел");
-                    System.out.println("(a - bi) = " + controller.sub(a, b));
+                    System.out.println("(" + a + ")" + " - " + "(" + b + ")" + " = " + controller.sub(a, b));
                     System.out.println("----------------------------");
                 }
                 case 3 -> {
                     System.out.println("Умножение комплексных чисел");
-                    System.out.println("(a * bi) = " + controller.mul(a, b));
+                    System.out.println("(" + a + ")" + " * " + "(" + b + ")" + " = " + controller.mul(a, b));
                     System.out.println("----------------------------");
                 }
                 case 4 -> {
                     System.out.println("Деление комплексных чисел");
-                    System.out.println("(a / bi) = " + controller.div(a, b));
+                    System.out.println("(" + a + ")" + " / " + "(" + b + ")" + " = " + controller.div(a, b));
                     System.out.println("----------------------------");
                 }
             }
         } else System.out.println("Некорректный ввод. Повторите выбор.");
-    }
-
-    private String prompt(String message) {
-        Scanner in = new Scanner(System.in);
-        System.out.print(message);
-        return in.nextLine();
     }
 
     private int promptInt(String message) {
