@@ -36,31 +36,31 @@ public class ViewCalc {
             Double imageB = (double) promptInt("Введите мнимую часть 'b' второго аргумента 'z2': ");
             ComplexNumber b = new ComplexNumber(realB, imageB);
             Calculable calculator = calculableFactory.create(a, b);
-            System.out.println("----------------------------");
+            System.out.println("----------------------------------------------------------------");
             switch (choice) {
                 case 1 -> {
                     System.out.println("Сложение комплексных чисел");
-                    System.out.println("----------------------------");
+                    System.out.println("----------------------------------------------------------------");
                     System.out.println(calculator.sum(a, b));
-                    System.out.println("----------------------------");
+                    System.out.println("----------------------------------------------------------------");
                 }
                 case 2 -> {
                     System.out.println("Вычитание комплексных чисел");
-                    System.out.println("----------------------------");
+                    System.out.println("----------------------------------------------------------------");
                     System.out.println( calculator.sub(a, b));
-                    System.out.println("----------------------------");
+                    System.out.println("----------------------------------------------------------------");
                 }
                 case 3 -> {
                     System.out.println("Умножение комплексных чисел");
-                    System.out.println("----------------------------");
+                    System.out.println("----------------------------------------------------------------");
                     System.out.println( calculator.multi(a, b));
-                    System.out.println("----------------------------");
+                    System.out.println("----------------------------------------------------------------");
                 }
                 case 4 -> {
                     System.out.println("Деление комплексных чисел");
-                    System.out.println("----------------------------");
+                    System.out.println("----------------------------------------------------------------");
                     System.out.println(calculator.div(a, b));
-                    System.out.println("----------------------------");
+                    System.out.println("----------------------------------------------------------------");
                 }
             }
         } else System.out.println("Некорректный ввод. Повторите выбор.");
