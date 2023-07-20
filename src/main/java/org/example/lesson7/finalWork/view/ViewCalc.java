@@ -1,16 +1,18 @@
 package org.example.lesson7.finalWork.view;
 
 import org.example.lesson7.finalWork.complexNum.ComplexNumber;
-import org.example.lesson7.finalWork.controller.Controller;
+import org.example.lesson7.finalWork.calculator.Calculable;
+import org.example.lesson7.finalWork.calculator.ICalculableFactory;
 
 import java.util.Scanner;
 
 public class ViewCalc {
-    private final Controller controller;
+    private ICalculableFactory calculableFactory;
 
-    public ViewCalc(Controller controller) {
-        this.controller = controller;
+    public ViewCalc(ICalculableFactory calculableFactory) {
+        this.calculableFactory = calculableFactory;
     }
+
 
     public void run() {
         System.out.println("================================");
@@ -33,26 +35,31 @@ public class ViewCalc {
             Double realB = (double) promptInt("Введите действительную часть 'a' второго аргумента 'z2': ");
             Double imageB = (double) promptInt("Введите мнимую часть 'b' второго аргумента 'z2': ");
             ComplexNumber b = new ComplexNumber(realB, imageB);
+            Calculable calculator = calculableFactory.create(a, b);
             System.out.println("----------------------------");
             switch (choice) {
                 case 1 -> {
                     System.out.println("Сложение комплексных чисел");
-                    System.out.println("(" + a + ")" + " + " + "(" + b + ")" + " = " + controller.sum(a, b));
+                    System.out.println("----------------------------");
+                    System.out.println(calculator.sum(a, b));
                     System.out.println("----------------------------");
                 }
                 case 2 -> {
                     System.out.println("Вычитание комплексных чисел");
-                    System.out.println("(" + a + ")" + " - " + "(" + b + ")" + " = " + controller.sub(a, b));
+                    System.out.println("----------------------------");
+                    System.out.println( calculator.sub(a, b));
                     System.out.println("----------------------------");
                 }
                 case 3 -> {
                     System.out.println("Умножение комплексных чисел");
-                    System.out.println("(" + a + ")" + " * " + "(" + b + ")" + " = " + controller.mul(a, b));
+                    System.out.println("----------------------------");
+                    System.out.println( calculator.multi(a, b));
                     System.out.println("----------------------------");
                 }
                 case 4 -> {
                     System.out.println("Деление комплексных чисел");
-                    System.out.println("(" + a + ")" + " / " + "(" + b + ")" + " = " + controller.div(a, b));
+                    System.out.println("----------------------------");
+                    System.out.println(calculator.div(a, b));
                     System.out.println("----------------------------");
                 }
             }

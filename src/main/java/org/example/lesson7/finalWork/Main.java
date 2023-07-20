@@ -1,14 +1,15 @@
 package org.example.lesson7.finalWork;
 
-import org.example.lesson7.finalWork.controller.Controller;
+import org.example.lesson7.finalWork.calculator.CalculableFactory;
+import org.example.lesson7.finalWork.calculator.ICalculableFactory;
+import org.example.lesson7.finalWork.log.ConsoleLogger;
+import org.example.lesson7.finalWork.log.LogCalculableFactory;
 import org.example.lesson7.finalWork.view.ViewCalc;
 
 public class Main {
     public static void main(String[] args) {
-//        ComplexNumber a = new ComplexNumber(7.0, -4.0);
-//        ComplexNumber b = new ComplexNumber(3.0, 2.0);
-        Controller controller = new Controller();
-        ViewCalc view = new ViewCalc(controller);
+        ICalculableFactory calculableFactory = new LogCalculableFactory(new ConsoleLogger());
+        ViewCalc view = new ViewCalc(calculableFactory);
         view.run();
     }
 }
